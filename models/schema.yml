@@ -34,17 +34,22 @@ models:
     #             - unique
     #             - not_null
 
-# sources:
-#     - name: stripe
-#       description: "Stripe payments data"
-#       database: raw
-#       schema: stripe
+sources:
+    - name: jaffle_shop
+      description: "The infamous and illustrious jaffle data"
+      database: raw
+      schema: jaffle_shop
 
-#      tables: 
-#       - name: src_stripe_payments
-#       description: "stripe payments data"
-#       identifier: payment
-#       loaded_at_field: _batched_at
+      tables: 
+      - name: customers
+        description: "Customers by name and id"   
+      - name: orders
+        description: "This source includes all order data"
+        loaded_at_field: etl_loaded_timestamp
+    
+    - name: stripe
+      description: "Stipe payments data"
+      loaded_at_field: _batched_at
 
 
 
