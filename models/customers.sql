@@ -12,7 +12,7 @@ with customers as (
 orders as (
 
     select
-        order_id
+        order_id,
         customer_id,
         order_date,
         order_status,
