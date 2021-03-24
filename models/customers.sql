@@ -1,7 +1,7 @@
 with customers as (
 
     select *
-    from {{ref('src_customers')}}
+    from {{ref('stg_customers')}}
 
 ),
 

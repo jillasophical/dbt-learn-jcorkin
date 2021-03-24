@@ -3,18 +3,19 @@ version: 2
 
 models:
       - name: customers
-        description: "Customers data -- yep this is a terrible description"
+        description: "Customers with aggregated order information including - first order date, recent order date, total # of orders, and total lifetime value"
+      
+      - name: stg_customers
+        description: "clean version of customer data"
 
-      - name: src_stripe_payments
-        description: "clean version of stripe payments"
-        ## come back later and make this a source
-
-      - name: src_orders
-        description: "clean version of orders"
-         ## come back later and make this a source
+      - name: stg_payments
+        description: "clean version of all stripe payments"
+        
 
       - name: stg_orders
-        description: "orders data with successful order amounts included"
+        description: "clean version of orders which includes successful payment amounts"
+         
+
         
     # - name: my_first_dbt_model
     #   description: "A starter dbt model"
@@ -50,6 +51,10 @@ sources:
     - name: stripe
       description: "Stipe payments data"
       loaded_at_field: _batched_at
+
+      tables:
+      - name: payment
+        loaded_at_field: _batched_at
 
 
 

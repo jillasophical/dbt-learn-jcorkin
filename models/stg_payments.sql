@@ -10,7 +10,7 @@
         , amount/100 as payment_amount
        
     
-    from raw.stripe.payment
+    from {{source('stripe', 'payment')}}
 
 )
 
