@@ -19,3 +19,11 @@ models:
             tests:
                 - unique
                 - not_null
+
+sources:
+    - name: src_stripe_payments
+      description: "Stripe payments data"
+
+
+
+
