@@ -4,6 +4,18 @@ version: 2
 models:
       - name: customers
         description: "Customers data -- yep this is a terrible description"
+
+      - name: src_stripe_payments
+        description: "clean version of stripe payments"
+        ## come back later and make this a source
+
+      - name: src_orders
+        description: "clean version of orders"
+         ## come back later and make this a source
+
+      - name: stg_orders
+        description: "orders data with successful order amounts included"
+        
     # - name: my_first_dbt_model
     #   description: "A starter dbt model"
     #   columns:
