@@ -2,28 +2,37 @@
 version: 2
 
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+      - name: customers
+        description: "Customers data -- yep this is a terrible description"
+    # - name: my_first_dbt_model
+    #   description: "A starter dbt model"
+    #   columns:
+    #       - name: id
+    #         description: "The primary key for this table"
+    #         tests:
+    #             - unique
+    #             - not_null
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+    # - name: my_second_dbt_model
+    #   description: "A starter dbt model"
+    #   columns:
+    #       - name: id
+    #         description: "The primary key for this table"
+    #         tests:
+    #             - unique
+    #             - not_null
 
-sources:
-    - name: src_stripe_payments
-      description: "Stripe payments data"
+# sources:
+#     - name: stripe
+#       description: "Stripe payments data"
+#       database: raw
+#       schema: stripe
 
+#      tables: 
+#       - name: src_stripe_payments
+#       description: "stripe payments data"
+#       identifier: payment
+#       loaded_at_field: _batched_at
 
 
 
